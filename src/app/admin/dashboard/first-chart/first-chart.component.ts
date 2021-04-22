@@ -10,6 +10,15 @@ export class FirstChartComponent implements OnInit {
     'DAY Simulation Time',
     'NIGHT Simulation Time'
   ];
+
+  public lineChartOptions:any = {
+    legend : {
+        labels : {
+          fontColor : '#ffffff',
+          size: "40px",
+        }
+    }
+};
   doughnutChartData = [178, 155];
   doughnutChartType = 'doughnut';
 

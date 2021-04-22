@@ -8,6 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class PieChartComponent implements OnInit {
   pieChartLabels: string[] = ['LUXURY SEDAN ', 'SUV', 'HATHBACK'];
   pieChartData: number[] = [20, 15, 10];
+   
+  public lineChartOptions:any = {
+    legend : {
+        labels : {
+          fontColor : '#ffffff',
+          size: "40px",
+        }
+    }
+};
   pieChartType = 'pie';
   constructor() {}
 
