@@ -21,16 +21,11 @@ export class DataService {
 
   constructor() {}
 
-  createNewUser(id: number): UserData {
-    const name =
-      this.names[this.getRandomArrayIndex(this.names.length)] +
-      ' ' +
-      this.names[this.getRandomArrayIndex(this.names.length)].charAt(0) +
-      '.';
-
+  createNewUser(id: number, names: String): UserData {
+      let uniqueKey = id + 1;
     return {
-      id: id.toString(),
-      name: name,
+      id: uniqueKey.toString(),
+      name: names.toString(),
       progress: Math.round(Math.random() * 100).toString(),
       amount: this.amount[this.getRandomArrayIndex(this.amount.length)]
     };
@@ -38,8 +33,9 @@ export class DataService {
 
   create100Users(): UserData[] {
     const users: UserData[] = [];
-    for (let i = 1; i <= this.amount.length; i++) {
-      users.push(this.createNewUser(i));
+    for (let i = 0; i < this.names.length; i++) {
+      debugger;
+      users.push(this.createNewUser(i, this.names[i]));
     }
     return users;
   }

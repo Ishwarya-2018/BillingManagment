@@ -9,11 +9,11 @@
   </mat-card>
    -->
 
-   <mat-card class="color">
+   <mat-card>
     <mat-card-header>
       <mat-card-title>Number Of Vehicles</mat-card-title>
     </mat-card-header>
-    <mat-card-content>
+    <mat-card-content class="pi1">
       <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)"
         (chartClick)="chartClicked($event)"></canvas>
     </mat-card-content>
